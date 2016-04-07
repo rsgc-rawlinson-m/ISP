@@ -1,21 +1,37 @@
+//score variable
+float score = 0;
+//first set
 float a = 0;
 float b = 0;
 float c = 0;
+//second set
 float d = 0;
 float e = 0;
 float f = 0;
+//third set
 float g = 0;
 float h = 0;
 float i = 0;
+//fourth set
 float j = 0;
 float k = 0;
 float l = 0;
+//fifth set
 float m = 0;
 float n = 0;
 float o = 0;
+//sixth set
 float p = 0;
 float q = 0;
 float r = 0;
+//seventh set
+float s = 0;
+float t = 0;
+float u = 0;
+//eighth set
+float v = 0;
+float w = 0;
+float x = 0;
 
 //boolean colorSet = false;
 
@@ -27,9 +43,9 @@ void draw() {
   background(255);
   fill(a, b, c);
   rect(50, 50, 50, 50);
-  fill(g, h, i);
-  rect(110, 50, 50, 50);
   fill(d, e, f);
+  rect(110, 50, 50, 50);
+  fill(g, h, i);
   rect(170, 50, 50, 50);
   fill(j, k, l);
   rect(230, 50, 50, 50);
@@ -37,131 +53,172 @@ void draw() {
   rect(290, 50, 50, 50);
   fill(p, q, r);
   rect(350, 50, 50, 50);
+  fill(s, t, u);
+  rect(410, 50, 50, 50);
+  fill(v, w, x);
+  rect(50, 110, 50, 50);
+
 
   //println("stuffA is " + a);
   //println("stuffB is " + d);
-  if (a == 255 && d == 255) {
-    fill(0);
-    rect(300, 300, 100, 100);
+  if (a == 100 && d == 100) {
+    score += 1;
+    println("score is " + score);
   }
   if (g == 100 && j == 100) {
-    fill(0);
-    rect(100, 300, 100, 100);
+    score += 1;
+    println("score is " + score);
+  }
+  if (m == 100 && p == 100) {
+    score +=1;
+    println("score is " + score);
+  }
+  if (s == 100 && v == 100) {
+    score +=1;
+    println("score is " + score);
   }
 }
 void mouseClicked() {
+  //top left
   if (mouseX>50 && mouseY>50&& mouseY <100 && mouseX < 100) {
-    a += 255;
-    b += 255;
-    c += 255;
+    a += 100;
+    b += 100;
+    c += 100;
     fill(a, b, c);
     rect(50, 50, 50, 50);
-    if (a>300) {
+    if (a>101) {
       a = 0;
     }
-    if (b>240) {
+    if (b>101) {
       b = 0;
     }
-    if (c>180) {
+    if (c>101) {
       c = 0;
     }
   }
 
-
+  //top 1 from left
   if (mouseX>110 && mouseY>50&& mouseY <100 && mouseX < 160) {
+    d += 100;
+    e += 100;
+    f += 100;
+    fill(d, e, f);
+    rect(170, 50, 50, 50);
+    if (d>101) {
+      d = 0;
+    }
+    if (e>101) {
+      e = 0;
+    }
+    if (f>101) {
+      f = 0;
+    }
+  }
+
+  //top 2 from left
+  if (mouseX>170 && mouseY>50&& mouseY <100 && mouseX < 220) {
     g += 100;
     h += 100;
     i += 100;
     fill(g, h, i);
-    rect(170, 50, 50, 50);
-    if (g>100) {
+    rect(110, 50, 50, 50);
+    if (g>101) {
       g = 0;
     }
-    if (h>100) {
+    if (h>101) {
       h = 0;
     }
-    if (i>100) {
+    if (i>101) {
       i = 0;
     }
   }
-  if (mouseX>170 && mouseY>50&& mouseY <100 && mouseX < 220) {
-    d += 255;
-    e += 255;
-    f += 255;
-    fill(d, e, f);
-    rect(110, 50, 50, 50);
-    if (d>300) {
-      d = 0;
-    }
-    if (e>240) {
-      e = 0;
-    }
-    if (f>180) {
-      f = 0;
-    }
-  }
+
+  //top 3 from left
   if (mouseX>230 && mouseY>50&& mouseY <100 && mouseX < 280) {
     j += 100;
     k += 100;
     l += 100;
     fill(j, k, l);
     rect(170, 50, 50, 50);
-    if (j>100) {
+    if (j>101) {
       j = 0;
     }
-    if (k>100) {
+    if (k>101) {
       k = 0;
     }
-    if (l>100) {
+    if (l>101) {
       l = 0;
     }
   }
+
+  //top 3 from right
   if (mouseX>290 && mouseY>50&& mouseY <100 && mouseX < 340) {
     m += 100;
     n += 100;
     o += 100;
     fill(m, n, o);
-    rect(170, 50, 50, 50);
-    if (m>100) {
+    rect(290, 50, 50, 50);
+    if (m>101) {
       m = 0;
     }
-    if (n>100) {
+    if (n>101) {
       n = 0;
     }
-    if (o>100) {
+    if (o>101) {
       o = 0;
     }
   }
+
+  //top 2 from right
   if (mouseX>350 && mouseY>50&& mouseY <100 && mouseX < 400) {
     p += 100;
     q += 100;
     r += 100;
     fill(p, q, r);
-    rect(170, 50, 50, 50);
-    if (p>100) {
+    rect(350, 50, 50, 50);
+    if (p>101) {
       p = 0;
     }
-    if (q>100) {
+    if (q>101) {
       q = 0;
     }
-    if (r>100) {
+    if (r>101) {
       r = 0;
     }
   }
-  if(mouseX>230 && mouseY>50&& mouseY <100 && mouseX < 280){
-    j += 200;
-    k += 200;
-    l += 100;
-    fill(j, k, l);
-    rect(170, 50, 50, 50);
-    if(j>100){
-      j = 0;
+  //top right
+  if (mouseX>410 && mouseY>50&& mouseY <100 && mouseX < 460) {
+    s += 100;
+    t += 100;
+    u += 100;
+    fill(s, t, u);
+    rect(410, 50, 50, 50);
+    if (s>101) {
+      s = 0;
     }
-    if(k>100){
-      k = 0;
+    if (t>101) {
+      t = 0;
     }
-    if(l>100){
-      l = 0;
+    if (u>101) {
+      u = 0;
     }
+  }
+  if (mouseX>50 && mouseY>100&& mouseY <150 && mouseX < 100) {
+    v += 100;
+    w += 100;
+    x += 100;
+    fill(v, w, x);
+    rect(410, 50, 50, 50);
+    if (v>101) {
+      v = 0;
+    }
+    if (w>101) {
+      w = 0;
+    }
+    if (x>101) {
+      x = 0;
+
+    }
+
   }
 }
