@@ -4,6 +4,7 @@ float score = 0;
 float a = 0;
 float b = 0;
 float c = 0;
+boolean matched1 = false;
 //second set
 float d = 0;
 float e = 0;
@@ -12,6 +13,7 @@ float f = 0;
 float g = 0;
 float h = 0;
 float i = 0;
+boolean matched2 = false;
 //fourth set
 float j = 0;
 float k = 0;
@@ -39,6 +41,7 @@ void setup() {
   size(500, 500);
 }
 
+
 void draw() {
   background(255);
   fill(a, b, c);
@@ -61,13 +64,15 @@ void draw() {
 
   //println("stuffA is " + a);
   //println("stuffB is " + d);
-  if (a == 100 && d == 100) {
+  if (a == 100 && d == 100 && matched1 == true) {
     score += 1;
     println("score is " + score);
+    matched1 = false;
   }
-  if (g == 100 && j == 100) {
+  if (g == 100 && j == 100 && matched2 == true) {
     score += 1;
     println("score is " + score);
+    matched2 = false;
   }
   if (m == 100 && p == 100) {
     score +=1;
@@ -113,6 +118,8 @@ void mouseClicked() {
     if (f>101) {
       f = 0;
     }
+
+    matched1 = true;
   }
 
   //top 2 from left
@@ -149,6 +156,7 @@ void mouseClicked() {
     if (l>101) {
       l = 0;
     }
+    matched2 = true;
   }
 
   //top 3 from right
@@ -217,8 +225,6 @@ void mouseClicked() {
     }
     if (x>101) {
       x = 0;
-
     }
-
   }
 }
