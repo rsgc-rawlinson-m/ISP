@@ -1,5 +1,8 @@
+
 //score variable
-float score = 0;
+int score = 0;
+//time variable
+int time = 0;
 //first set
 float a = 0;
 float b = 0;
@@ -44,6 +47,7 @@ float cc = 0;
 float dd = 0;
 float ee = 0;
 float ff = 0;
+boolean matched5 = false;
 
 //boolean colorSet = false;
 
@@ -70,10 +74,18 @@ void draw() {
   rect(410, 50, 50, 50);
   fill(v, w, x);
   rect(50, 110, 50, 50);
+  fill(aa, bb, cc);
+  rect(110, 110, 50, 50);
+  fill(dd, ee, ff);
+  rect(170, 110, 50, 50);
+  //keep track of score and time
+  fill(0, 0, 0);
+  text("Score: " + score, 400, 400);
+  if(frameCount % 60 == 0){
+    time += 1;
+  }
+  text("Time taken: " + time, 400, 370);
 
-
-  //println("stuffA is " + a);
-  //println("stuffB is " + d);
   if (a == 100 && d == 100 && matched1 == true) {
     score += 1;
     println("score is " + score);
@@ -85,8 +97,6 @@ void draw() {
     e += 155;
     f += 155;
     noStroke();
-    fill(a, b, c);
-    rect(49, 49, 52, 52);
   }
   if (g == 100 && j == 100 && matched2 == true) {
     score += 1;
@@ -99,8 +109,6 @@ void draw() {
     k += 155;
     l += 155;
     noStroke();
-    fill(g, h, i);
-    rect(169, 49, 52, 52);
   }
   if (m == 100 && p == 100 && matched3 == true) {
     score +=1;
@@ -113,8 +121,6 @@ void draw() {
     q += 155;
     r += 155;
     noStroke();
-    fill(m, n, o);
-    rect(289, 49, 52, 52);
   }
   if (s == 100 && v == 100 && matched4 == true) {
     score +=1;
@@ -127,10 +133,19 @@ void draw() {
     w += 155;
     x += 155;
     noStroke();
-    fill(a, b, c);
-    rect(49, 49, 52, 52);
   }
-  //if (
+  if (aa == 100 && dd == 100 && matched5 == true) {
+    score +=1;
+    println("score is " + score);
+    matched5 = false;
+    aa += 155;
+    bb += 155;
+    cc += 155;
+    dd += 155;
+    ee += 155;
+    ff += 155;
+    noStroke();
+  }
 }
 void mouseClicked() {
   //top left
@@ -277,5 +292,38 @@ void mouseClicked() {
       x = 0;
     }
     matched4 = true;
+  }
+  if (mouseX>110 && mouseY>100&& mouseY <150 && mouseX < 160) {
+    aa += 100;
+    bb += 100;
+    cc += 100;
+    fill(aa, bb, cc);
+    rect(410, 50, 50, 50);
+    if (aa>101) {
+      aa = 0;
+    }
+    if (bb>101) {
+      bb = 0;
+    }
+    if (cc>101) {
+      cc = 0;
+    }
+  }
+  if (mouseX>160 && mouseY>100&& mouseY <150 && mouseX < 220) {
+    dd += 100;
+    ee += 100;
+    ff += 100;
+    fill(dd, ee, ff);
+    rect(410, 50, 50, 50);
+    if (dd>101) {
+      dd = 0;
+    }
+    if (ee>101) {
+      ee = 0;
+    }
+    if (ff>101) {
+      ff = 0;
+    }
+    matched5 = true;
   }
 }
