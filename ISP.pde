@@ -22,6 +22,7 @@ float l = 0;
 float m = 0;
 float n = 0;
 float o = 0;
+boolean matched3 = false;
 //sixth set
 float p = 0;
 float q = 0;
@@ -30,10 +31,19 @@ float r = 0;
 float s = 0;
 float t = 0;
 float u = 0;
+boolean matched4 = false;
 //eighth set
 float v = 0;
 float w = 0;
 float x = 0;
+//ninth set
+float aa = 0;
+float bb = 0;
+float cc = 0;
+//tenth set
+float dd = 0;
+float ee = 0;
+float ff = 0;
 
 //boolean colorSet = false;
 
@@ -68,20 +78,59 @@ void draw() {
     score += 1;
     println("score is " + score);
     matched1 = false;
+    a += 155;
+    b += 155;
+    c += 155;
+    d += 155;
+    e += 155;
+    f += 155;
+    noStroke();
+    fill(a, b, c);
+    rect(49, 49, 52, 52);
   }
   if (g == 100 && j == 100 && matched2 == true) {
     score += 1;
     println("score is " + score);
     matched2 = false;
+    g += 155;
+    h += 155;
+    i += 155;
+    j += 155;
+    k += 155;
+    l += 155;
+    noStroke();
+    fill(g, h, i);
+    rect(169, 49, 52, 52);
   }
-  if (m == 100 && p == 100) {
+  if (m == 100 && p == 100 && matched3 == true) {
     score +=1;
     println("score is " + score);
+    matched3 = false;
+    m += 155;
+    n += 155;
+    o += 155;
+    p += 155;
+    q += 155;
+    r += 155;
+    noStroke();
+    fill(m, n, o);
+    rect(289, 49, 52, 52);
   }
-  if (s == 100 && v == 100) {
+  if (s == 100 && v == 100 && matched4 == true) {
     score +=1;
     println("score is " + score);
+    matched4 = false;
+    s += 155;
+    t += 155;
+    u += 155;
+    v += 155;
+    w += 155;
+    x += 155;
+    noStroke();
+    fill(a, b, c);
+    rect(49, 49, 52, 52);
   }
+  //if (
 }
 void mouseClicked() {
   //top left
@@ -193,6 +242,7 @@ void mouseClicked() {
     if (r>101) {
       r = 0;
     }
+    matched3 = true;
   }
   //top right
   if (mouseX>410 && mouseY>50&& mouseY <100 && mouseX < 460) {
@@ -226,5 +276,6 @@ void mouseClicked() {
     if (x>101) {
       x = 0;
     }
+    matched4 = true;
   }
 }
