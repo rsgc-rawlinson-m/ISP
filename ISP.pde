@@ -218,7 +218,7 @@ void mouseClicked() {
   }
 
   //top 1 from left
-  if (mouseX>110 && mouseY>50&& mouseY <100 && mouseX < 160) {
+  if (mouseX>110 && mouseY>50 && mouseY <100 && mouseX < 160) {
     d += 100;
     e += 100;
     f += 100;
@@ -410,20 +410,21 @@ void mouseClicked() {
       ll = 0;
     }
   }
-  if (mouseX>270 && mouseY>100&& mouseY <150 && mouseX < 340) {
-    jj += 100;
-    kk += 100;
-    ll += 100;
-    fill(jj, kk, ll);
+  if (mouseX>330 && mouseY>100&& mouseY <150 && mouseX < 400) {
+    mm += 100;
+    nn += 100;
+    oo += 100;
+    fill(mm, nn, oo);
     rect(410, 50, 50, 50);
-    if (jj>101) {
-      jj = 0;
+    if (mm>101) {
+      mm = 0;
     }
-    if (kk>101) {
-      kk = 0;
+    if (nn>101) {
+      nn = 0;
     }
-    if (ll>101) {
-      ll = 0;
+    if (oo>101) {
+      oo = 0;
     }
+    matched7 = true;
   }
 }
