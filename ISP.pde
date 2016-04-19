@@ -1,53 +1,87 @@
 
 //score variable
 int score = 0;
+
 //time variable
 int time = 0;
-//first set
+
+//boolean operators
+boolean matched1 = false;
+boolean matched2 = false;
+boolean matched3 = false;
+boolean matched4 = false;
+boolean matched5 = false;
+boolean matched6 = false;
+boolean matched7 = false;
+
+//1
 float a = 0;
 float b = 0;
 float c = 0;
-boolean matched1 = false;
-//second set
+
+//2
 float d = 0;
 float e = 0;
 float f = 0;
-//third set
+//3
 float g = 0;
 float h = 0;
 float i = 0;
-boolean matched2 = false;
-//fourth set
+
+//4
 float j = 0;
 float k = 0;
 float l = 0;
-//fifth set
+
+//5
 float m = 0;
 float n = 0;
 float o = 0;
-boolean matched3 = false;
-//sixth set
+
+//6
 float p = 0;
 float q = 0;
 float r = 0;
-//seventh set
+
+//7
 float s = 0;
 float t = 0;
 float u = 0;
-boolean matched4 = false;
-//eighth set
+
+//8
 float v = 0;
 float w = 0;
 float x = 0;
-//ninth set
+
+//9
 float aa = 0;
 float bb = 0;
 float cc = 0;
-//tenth set
+
+//10
 float dd = 0;
 float ee = 0;
 float ff = 0;
-boolean matched5 = false;
+
+//11
+float gg = 0;
+float hh = 0;
+float ii = 0;
+
+//12
+float jj = 0;
+float kk = 0;
+float ll = 0;
+
+//13
+float mm = 0;
+float nn = 0;
+float oo = 0;
+//14
+float pp = 0;
+float qq = 0;
+float rr = 0;
+
 
 //boolean colorSet = false;
 
@@ -78,10 +112,15 @@ void draw() {
   rect(110, 110, 50, 50);
   fill(dd, ee, ff);
   rect(170, 110, 50, 50);
+  fill(gg, hh, ii);
+  rect(230, 110, 50, 50);
+  fill(jj, kk, ll);
+  rect(290, 110, 50, 50);
+
   //keep track of score and time
   fill(0, 0, 0);
   text("Score: " + score, 400, 400);
-  if(frameCount % 60 == 0){
+  if (frameCount % 60 == 0) {
     time += 1;
   }
   text("Time taken: " + time, 400, 370);
@@ -138,12 +177,24 @@ void draw() {
     score +=1;
     println("score is " + score);
     matched5 = false;
-    aa += 155;
-    bb += 155;
-    cc += 155;
-    dd += 155;
-    ee += 155;
-    ff += 155;
+    aa = 255;
+    bb = 255;
+    cc = 255;
+    dd = 255;
+    ee = 255;
+    ff = 255;
+    noStroke();
+  }
+  if (gg == 100 && jj == 100 && matched6 == true) {
+    score +=1;
+    println("score is " + score);
+    matched6 = false;
+    gg = 255;
+    hh = 255;
+    ii = 255;
+    jj = 255;
+    kk = 255;
+    ll = 255;
     noStroke();
   }
 }
@@ -325,5 +376,54 @@ void mouseClicked() {
       ff = 0;
     }
     matched5 = true;
+  }
+  if (mouseX>210 && mouseY>100&& mouseY <150 && mouseX < 280) {
+    gg += 100;
+    hh += 100;
+    ii += 100;
+    fill(gg, hh, ii);
+    rect(410, 50, 50, 50);
+    if (gg>101) {
+      gg = 0;
+    }
+    if (hh>101) {
+      hh = 0;
+    }
+    if (ii>101) {
+      ii = 0;
+    }
+    matched6 = true;
+  }
+  if (mouseX>270 && mouseY>100&& mouseY <150 && mouseX < 340) {
+    jj += 100;
+    kk += 100;
+    ll += 100;
+    fill(jj, kk, ll);
+    rect(410, 50, 50, 50);
+    if (jj>101) {
+      jj = 0;
+    }
+    if (kk>101) {
+      kk = 0;
+    }
+    if (ll>101) {
+      ll = 0;
+    }
+  }
+  if (mouseX>270 && mouseY>100&& mouseY <150 && mouseX < 340) {
+    jj += 100;
+    kk += 100;
+    ll += 100;
+    fill(jj, kk, ll);
+    rect(410, 50, 50, 50);
+    if (jj>101) {
+      jj = 0;
+    }
+    if (kk>101) {
+      kk = 0;
+    }
+    if (ll>101) {
+      ll = 0;
+    }
   }
 }
