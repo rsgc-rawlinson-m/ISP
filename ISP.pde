@@ -116,6 +116,8 @@ void draw() {
   rect(230, 110, 50, 50);
   fill(jj, kk, ll);
   rect(290, 110, 50, 50);
+  fill(mm, nn, oo);
+  rect(350, 110, 50, 50);
 
   //keep track of score and time
   fill(0, 0, 0);
@@ -196,6 +198,17 @@ void draw() {
     kk = 255;
     ll = 255;
     noStroke();
+  }
+  if (mm == 100 && nn == 100 && matched7 == true){
+    score +=1;
+    println("score is " + score);
+    matched7 = false;
+    mm = 255;
+    nn = 255;
+    oo = 255;
+    pp = 255;
+    qq = 255;
+    rr = 255;
   }
 }
 void mouseClicked() {
